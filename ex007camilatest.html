@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Values</title>
+
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background-color: pink;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 110px;
+        }
+        input[type=button]{
+            font: normal 16pt Arial;
+            background-color: #d4dae0;
+        }
+        div#res {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Adding Values</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="calculate" onclick="calculating()">
+    <div id="res">Result</div>
+
+<script>
+    function calculating(){ 
+        var box1 = window.document.getElementById('txtn1')
+        var box2 = window.document.getElementById('txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(box1.value)
+        var n2 = Number(box2.value)
+        var r = n1 + n2
+        res.innerHTML = `The sum of ${n1} and ${n2} is <strong>${r}</strong>!`;
+        
+    }
+
+</script>
+
+</body>
+</html>
